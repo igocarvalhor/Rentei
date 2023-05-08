@@ -1,23 +1,16 @@
-const carousel = document.querySelector('.carousel');
-const carouselItems = document.querySelector('.carousel-items');
-const prevBtn = document.querySelector('.carousel-prev');
-const nextBtn = document.querySelector('.carousel-next');
 
-let itemWidth = carouselItems.firstElementChild.offsetWidth;
-let itemsPerView = Math.floor(carousel.offsetWidth / itemWidth);
-let currentPosition = 0;
-let maxPosition = carouselItems.children.length - itemsPerView;
+const formulario = document.getElementById('formulario');
+const enviarBtn = document.getElementById('enviar-btn');
+const mensagem = document.getElementById('mensagem');
 
-prevBtn.addEventListener('click', () => {
-  if (currentPosition > 0) {
-    currentPosition--;
-    carouselItems.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+function mostrarAlerta() {
+  if (mensagem.value.trim() !== '') {
+    alert('Mensagem enviada com sucesso!');
   }
-});
+}
 
-nextBtn.addEventListener('click', () => {
-  if (currentPosition < maxPosition) {
-    currentPosition++;
-    carouselItems.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
-  }
+formulario.addEventListener('submit', function(event) {
+  event.preventDefault();
+  mostrarAlerta();
+  mensagem.value = '';
 });

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent.ei</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <nav class="nav-bar">
@@ -23,38 +24,42 @@
     </nav>
 
 
-    <section style="padding: 50px;">
+    <center> <section style="padding: 50px;" class="fale-conosco">
       <h1 style="padding-bottom: 20px;">Fale conosco</h1>
     
       <div>
         <p>Telefone: +55 81 9999-9999</p>
         <p>Email: rentei@company.com</p>
-      </div>
+        <br>
+      </div></center>
     
       <form id="formulario">
-        <label for="mensagem" style="padding-top: 20px;">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" cols="30" rows="10" style="width: 30%; padding: 10px;"></textarea>
+        <center><label for="mensagem" style="padding-top: 20px;">Escreva sua mensagem</label></center>
+        <center><textarea id="mensagem" name="mensagem" cols="30" rows="10" style="width: 30%; padding: 10px;" class="input-fale" placeholder="Dúvidas, críticas ou sugestões aqui..."></textarea></center><br>
     
-        <input type="submit" value="Enviar" style="width: 10%; padding:10px;" id="enviar-btn">
+        <center><input type="submit" value="Enviar" style="width: 10%; padding:10px;"  id="enviar-btn"></center><br>
       </form>
     </section>
     
     <script>
+      
       const formulario = document.getElementById('formulario');
       const enviarBtn = document.getElementById('enviar-btn');
       const mensagem = document.getElementById('mensagem');
-    
+
       function mostrarAlerta() {
-        alert('Mensagem enviada com sucesso!');
+        if (mensagem.value.trim() !== '') {
+          alert('Mensagem enviada com sucesso!');
+        }
       }
-    
+
       formulario.addEventListener('submit', function(event) {
         event.preventDefault();
         mostrarAlerta();
         mensagem.value = '';
-       
       });
     </script>
+    
     
       
 
