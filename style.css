@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position:sticky;
+    background-color: orange;
+   
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s ease-in-out;
+  animation: pulse 1s ease-in-out;
+  font-size:larger;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+ 
+  
+  
+    
+}
+
+a:hover{
+    color:orangered;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-style:italic;
+    
+}
+
+
+
+li{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    list-style: none;
+    margin-right: 80px;
+    
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 250px;
+    height: 120px; 
+    
+   
+}
+
+/*SESSÃO CARROSSEL*/
+.carousel-container {
+   
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 0 10px;
+    max-width: 100%;
+  }
+  
+  .carousel {
+    position: absolute;
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slide 20s linear infinite;
+  }
+  
+  .carousel img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-20%);
+    }
+    45% {
+      transform: translateX(-20%);
+    }
+    50% {
+      transform: translateX(-40%);
+    }
+    70% {
+      transform: translateX(-40%);
+    }
+    75% {
+      transform: translateX(-60%);
+    }
+    95% {
+      transform: translateX(-60%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+
+/*SESSÃO CARDS*/
+.motivos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(0, 0, 0);
+  max-width: 100%;
+ 
+}
+
+.motivosp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  color: orange;
+}
+
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+  }
+  
+  .card {
+    width: 22%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    padding: 10px;
+  }
+  
+  .card-info h3 {
+    margin-top: 0;
+  }
+  
+  .card-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .card-info a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+
+
+  body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    
+  }
+
+
+
+
+/*Sessão QUEM SOMOS*/
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #ffffff9a;
+  border: #333;
+  box-shadow: 0 0 10px;
+  max-width: 100%;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  width: 50%;
+  box-shadow: 0 0 10px;
+  border-radius: 10px;
+}
+
+.coluna {
+  width: 70%;
+  text-align: center;
+  
+}
+
+.coluna h2{
+  color: #0077ff;
+  font-size: 40px;
+}
+
+.btn-primary{
+ 
+  color: #f5f5f5;
+  margin-top: 40px;
+  background-color: #0077ff;
+  border-radius: 20px;
+ 
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+  
+  
+}
+
+.btn-primary:hover{
+color: orangered;
+
+}
+
+/*SESSÃO FORMULÁRIO*/
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+    
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  
+   
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
+    
+    label {
+    font-weight: bold;
+    width: 150px;
+    margin-right: 10px;
+    
+    }
+    
+    input,
+    select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    box-shadow: 0 0 2px;
+    }
+    
+    input[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    @media screen and (max-width: 480px) {
+    label {
+    width: 100%;
+    margin-bottom: 5px;
+    }
+    input,
+    select {
+    margin-bottom: 10px;
+    margin-right: 0;
+    }
+    }
+
+    
+      
+      .form-group {
+     
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      }
+      
+      label {
+      font-weight: bold;
+      width: 150px;
+      margin-right: 10px;
+      }
+      
+      input,
+      select {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f5f5f5;
+      margin-right: 10px;
+      }
+      
+      input[type="submit"] {
+      background-color: #0077ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      }
+      
+      @media screen and (max-width: 480px) {
+      label {
+      width: 100%;
+      margin-bottom: 5px;
+      }
+      input,
+      select {
+      margin-bottom: 10px;
+      margin-right: 0;
+      }
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #8a8888;
+        }
+        
+            
+            button[type="submit"] {
+            margin: 0 auto;
+            display: block;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            }
+            
+            button[type="submit"]:hover {
+            background-color: orangered;
+            }
+
+            background-color{
+    
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            }
+            
+            button[type="submit"]:hover {
+            
+            background-color: orangered;
+            }
+
+
+            /*FOOTER*/
+
+            .rodape{
+              display: flex;
+              justify-content:space-around;
+              background-color: #8a8888;
+              padding-top: 20px;
+              color: #fff;
+              font-size: 20px;
+            }
+
+            .rodape p{
+              padding-left: 10px;
+            }
+
+            .rodape img{
+              display:inline-flex;
+              justify-content:flex-end;
+              align-items: flex-end;
+              width: 30px;
+              
+              
+              
+
+            }
+
+           .copy{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            background-color: gray;
+           }
+           
+           
+           
