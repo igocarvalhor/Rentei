@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent.ei</title>
     <link rel="stylesheet" href="style.css">
+    <script src="web.js"></script>
 </head>
 <body>
     <nav class="nav-bar">
@@ -30,7 +31,7 @@
 
   
     
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="myForm">
     
     <input type=hidden name="oid" value="00DDo000001CrYX">
     <input type=hidden name="retURL" value="https://renteicar.vercel.app/index.html">
@@ -41,11 +42,11 @@
     
     <label for="last_name">Sobrenome</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required /><br>
     
-    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" required/><br>
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" placeholder="exemplo@email.com" required/><br>
 
-    <label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" required /><br>
+    <label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" size="20" type="number" placeholder="000000-0000" required /><br>
     
-    <label for="mobile">Celular</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" required/><br>
+    <label for="mobile">Celular</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="number" placeholder="000000-0000" required/><br>
     
     <label for="company">Empresa</label><input  id="company" maxlength="40" name="company" size="20" type="text" required/><br>
     
@@ -64,8 +65,14 @@
     
     </form>
         
+    <div id="mensagemErro"></div>
 
     </div>
+
+    <script src="web.js"></script>
+
+ 
+
 
 
     <footer class="rodape">
