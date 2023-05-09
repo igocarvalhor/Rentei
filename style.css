@@ -32,7 +32,7 @@ a {
 }
 
 a:hover{
-    color:orangered;
+    color:#ff4500;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     font-style:italic;
@@ -133,7 +133,7 @@ li{
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
-  color: orange;
+  color: #ffa500;
 }
 
   
@@ -250,6 +250,10 @@ color: orangered;
 
 }
 
+.main-quemSomos{
+  box-sizing: border-box;
+  padding: 30px;
+}
 /*SESSÃO FORMULÁRIO*/
   .form-container {
     max-width: 500px;
